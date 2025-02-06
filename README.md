@@ -14,7 +14,7 @@ This script loops through every child directory, looks at the `git diff` and cre
 $ git clone https://github.com/InstantlyMoist/git-ai-commit
 $ mv ./git-ai-commit/autocommit.sh ~/your-desired-directory
 $ chmod +x ~/your-desired-directory/autocommit.sh
-$ ~/autocommit.sh
+$ ~/your-desired-directory/autocommit.sh
 ```
 
 # Tested with model
