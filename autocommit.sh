@@ -24,7 +24,15 @@ generate_ai_commit_message() {
   fi
 
   local prompt
-  prompt="Generate a concise and informative commit message summarizing the following git diff, make sure NO other text but the commit message is present:\n\n${diff}"
+  prompt="Generate a concise and informative commit message summarizing the following git diff (preferably a list, without mentioning the commit itself), make sure NO other text but the commit message is present:"
+
+  # If $COMMIT_PROMPT is set, use it as the prompt
+  if [ -n "${COMMIT_PROMPT:-}" ]; then
+    prompt="$COMMIT_PROMPT"
+  fi
+
+  # Add diff
+  prompt="$prompt\n\n${diff}"
 
   # Query the Ollama local model (llama3.2) with the prompt
   local commit_message

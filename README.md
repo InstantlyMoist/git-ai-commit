@@ -15,6 +15,9 @@ $ git clone https://github.com/InstantlyMoist/git-ai-commit
 $ mv ./git-ai-commit/autocommit.sh ~/your-desired-directory
 $ chmod +x ~/your-desired-directory/autocommit.sh
 $ ~/your-desired-directory/autocommit.sh
+
+# Change prompt (if desired)
+export COMMIT_PROMPT="Generate a concise and informative commit message summarizing the following git diff:"
 ```
 
 # Tested with model
