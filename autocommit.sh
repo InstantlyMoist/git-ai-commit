@@ -24,7 +24,7 @@ generate_ai_commit_message() {
   fi
 
   local prompt
-  prompt="Generate a concise and informative commit message summarizing the following git diff (preferably a list, without mentioning the commit itself), make sure NO other text but the commit message is present:"
+  prompt="Generate a concise and informative commit message summarizing the following git diff, make sure NO other text but the commit message is present, and the message starts with a summary:"
 
   # If $COMMIT_PROMPT is set, use it as the prompt
   if [ -n "${COMMIT_PROMPT:-}" ]; then
